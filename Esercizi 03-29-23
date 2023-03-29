@@ -1,0 +1,30 @@
+
+TRADUZIONE E SPIEGAZIONE CODICE ASSEMBLY
+
+
+0x00001141 <+8>: mov EAX,0x20
+0x00001148 <+15>: mov EDX,0x38
+0x00001155 <+28>: add EAX,EDX
+0x00001157 <+30>: mov EBP, EAX
+0x0000115a <+33>: cmp EBP,0xa
+0x0000115e <+37>: jge 0x1176 <main+61>
+0x0000116a <+49>: mov eax,0x0
+0x0000116f <+54>: call 0x1030 printf@plt
+
+
+
+0x00001149 : mov EAX, 32        Si gnifica che nella locazione di memoria indicata, nel registro EAX va messo il valore 32.
+
+0x00001163 : mov EDX, 56	Si gnifica che nella locazione di memoria indicata, nel registro EDX va messo il valore 56.
+
+0x00001183 : add EAX, EDX       Si gnifica che nella locazione di memoria indicata, vanno sommati i valori dei due registri ed il risultato impostato a EAX.
+
+0x00001187 : mov EBP, EAX       Si gnifica che nella locazione di memoria indicata, il valore di EAX va messo in EBP.
+
+0x00001181 : cmp EBP, 10	Si gnifica che nella locazione di memoria indicata, il valore EBP viene confrontato con 10.
+
+0x0000142 : jge 0x1176 <main+61> Indica un salto condizionale in seguito alla comparazione del "primo operando >= secondo operando", se positiva l'indirizzo di memoria diventa il primo operando.
+
+0x0000165 : mov EAX, 0x0	Si gnifica che nella locazione di memoria indicata, il valore EAX viene impostato ad un puntatore nullo.
+
+0x0000170 : call 0x1030 printf@plt  Si tratta di una funzione che chiama la funzione printf del linguaggio C.
